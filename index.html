@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e6ce39d005.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+      <div class="title">
+        <h1>Our Reviews</h1>
+        <div class="underline">__________</div>
+      </div>
+    <div class="container">
+    
+   
+        <div class="image_container">
+
+            <div class="photo_cont">
+                
+                <i class="fa-solid fa-quote-right" id="quot"></i>
+              
+                
+         <div class="photo_back"></div>
+
+         <img class="photo" id="susan" src="/JS/review project/1.png" alt="" />
+        
+        </div>
+
+          <h4 id="author">Sara Jones</h4>
+
+          <p id="job">Web Developer</p>
+
+          <p id="information">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet
+            laborum rerum officiis maxime eligendi beatae mollitia porro vitae
+            placeat.
+          </p>
+
+          <div class="button_cont">
+
+            <div class="arrows">
+              <i class="fa-solid fa-angle-left" onclick="left()"></i>
+              <i class="fa-solid fa-angle-right" onclick="right()"></i>
+            </div>
+            <br>
+            <button class="random_btn"onclick="surprise()">surprise me</button>
+         
+        </div>
+        </div>
+      
+    </div>
+
+    <script>
+      var personAuthor = document.getElementById("author");
+      var personJob = document.getElementById("job");
+      var personInfo = document.getElementById("information");
+      var personImage = document.querySelector(".photo");
+
+      const people = [
+        {
+          author: "Sayuıhhhra Jogghhhhpoyıyunes",
+          job: "web designer",
+          info: "Lochghmmrem ipsum dolor sit amet conmghmsectetur adipisicing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          image: "1.png",
+        },
+        {
+          author: "Saryıya J456546ones",
+          job: "web ",
+          info: "Lorebmnbnm ipsum dghmolor sit amet consghmectetur adipisicing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          image: "2.png",
+        },
+        {
+          author: "Sarahhhh Jo44nes",
+          job: " designer",
+          info: "Lorbnmbem ipsum dolor sit amet consectetur adipisivbncing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          image:"3.png",
+        },
+        {
+          author: "Sahhhhra Joggnehhhs",
+          job: "web222 designer",
+          info: "Lorvbmcem ipsum dolor sit amet consectetur adipisicing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          image: "4.png",
+        },
+      ];
+
+
+ 
+
+      for ( i = 0; i < people.length; i++) {
+           people[i];
+           
+          
+      }
+
+      function print(){
+          personImage.setAttribute("src", people[i].image);
+          personAuthor.innerHTML=people[i].author;
+          personJob.innerHTML=people[i].job;
+          personInfo.innerHTML=people[i].info;
+     
+          
+      }
+
+      function right(){
+
+      if(i >= people.length -1)
+      i = -1
+      i++ 
+        print();
+}
+      function left(){
+
+        if(i<=0) i=people.length;
+        i--;
+        print();
+      }
+
+      
+    var generatedIndexnumber ;
+    var generatedIndexnumberNew;
+
+    function surprise() {
+        
+        
+        var generatedIndexnumber  = Math.floor(Math.random()*people.length);
+
+
+        while(generatedIndexnumber == generatedIndexnumberNew) {
+            var generatedIndexnumber = Math.floor(Math.random()*people.length)
+        } 
+        
+        generatedIndexnumber == generatedIndexnumberNew
+        console.log(generatedIndexnumber)
+       
+
+          personImage.setAttribute("src", people[generatedIndexnumber].image);
+          personAuthor.innerHTML=people[generatedIndexnumber].author;
+          personJob.innerHTML=people[generatedIndexnumber].job;
+          personInfo.innerHTML=people[generatedIndexnumber].info;
+
+
+    }
+
+    
+    </script>
+  </body>
+</html>
