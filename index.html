@@ -5,53 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e6ce39d005.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e6ce39d005.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-
-      <div class="title">
-        <h1>Our Reviews</h1>
-        <div class="underline">__________</div>
-      </div>
+    <div class="title">
+      <h1>Our Reviews</h1>
+      <div class="underline"></div>
+    </div>
     <div class="container">
-    
-   
-        <div class="image_container">
+      <div class="image_container">
+        <div class="photo_cont">
+          <i class="fa-solid fa-quote-right" id="quot"></i>
 
-            <div class="photo_cont">
-                
-                <i class="fa-solid fa-quote-right" id="quot"></i>
-              
-                
-         <div class="photo_back"></div>
+          <div class="photo_back"></div>
 
-         <img class="photo" id="susan" src="/JS/review project/1.png" alt="" />
-        
+          <img class="photo" id="susan" src="1.png" alt="" />
         </div>
 
-          <h4 id="author">Sara Jones</h4>
+        <h4 id="author">Sara Jones</h4>
 
-          <p id="job">Web Developer</p>
+        <p id="job">WEB DEVELOPER</p>
 
-          <p id="information">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet
-            laborum rerum officiis maxime eligendi beatae mollitia porro vitae
-            placeat.
-          </p>
+        <p id="information">
+          I thought it was fake...… But its real and  editors really tried to help me. Loved Ranch. I am gonna use it for my business purposes from now onwards
+        </p>
 
-          <div class="button_cont">
-
-            <div class="arrows">
-              <i class="fa-solid fa-angle-left" onclick="left()"></i>
-              <i class="fa-solid fa-angle-right" onclick="right()"></i>
-            </div>
-            <br>
-            <button class="random_btn"onclick="surprise()">surprise me</button>
-         
+        <div class="button_cont">
+          <div class="arrows">
+            <i class="fa-solid fa-angle-left" onclick="left()"></i>
+            <i class="fa-solid fa-angle-right" onclick="right()"></i>
+          </div>
+          <br />
+          <button class="random_btn" onclick="surprise()">surprise me</button>
         </div>
-        </div>
-      
+      </div>
     </div>
 
     <script>
@@ -62,90 +53,71 @@
 
       const people = [
         {
-          author: "Sayuıhhhra Jogghhhhpoyıyunes",
-          job: "web designer",
-          info: "Lochghmmrem ipsum dolor sit amet conmghmsectetur adipisicing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          author: "Michaelle jackson",
+          job: "STUDENT",
+          info: "It helped me a lot to write in English. There are people who can check my writing and in the same time, I can learn where my mistakes are.",
           image: "1.png",
         },
         {
-          author: "Saryıya J456546ones",
-          job: "web ",
-          info: "Lorebmnbnm ipsum dghmolor sit amet consghmectetur adipisicing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          author: "Rezzan Sarıkaya",
+          job: "FARMER ",
+          info: "Everytime I have any confusions, I go to TextRanch to review my words. It is such a useful tool and the editors are really helpful.",
           image: "2.png",
         },
         {
-          author: "Sarahhhh Jo44nes",
-          job: " designer",
-          info: "Lorbnmbem ipsum dolor sit amet consectetur adipisivbncing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
-          image:"3.png",
+          author: "Indra Lee",
+          job: " DESIGNER",
+          info: "I'm stoked that actual people are reviewing my text. I want to express my most sincere appreciation to them for taking the time to help me",
+          image: "3.png",
         },
         {
-          author: "Sahhhhra Joggnehhhs",
-          job: "web222 designer",
-          info: "Lorvbmcem ipsum dolor sit amet consectetur adipisicing elit.Nobis laborum,rerumficiis maxime eligendi beatae mollitia porro vitae placeat.",
+          author: "Salih Şahin",
+          job: "BUTCHER",
+          info: "This is a smart format! Didn't know my text would be edited on the spot. Therefor I'm really excited to use it again in the future.",
           image: "4.png",
         },
       ];
 
-
- 
-
-      for ( i = 0; i < people.length; i++) {
-           people[i];
-           
-          
+      for (i = 0; i < people.length; i++) {
+        people[i];
       }
 
-      function print(){
-          personImage.setAttribute("src", people[i].image);
-          personAuthor.innerHTML=people[i].author;
-          personJob.innerHTML=people[i].job;
-          personInfo.innerHTML=people[i].info;
-     
-          
+      function print() {
+        personImage.setAttribute("src", people[i].image);
+        personAuthor.innerHTML = people[i].author;
+        personJob.innerHTML = people[i].job;
+        personInfo.innerHTML = people[i].info;
       }
 
-      function right(){
-
-      if(i >= people.length -1)
-      i = -1
-      i++ 
+      function right() {
+        if (i >= people.length - 1) i = -1;
+        i++;
         print();
-}
-      function left(){
-
-        if(i<=0) i=people.length;
+      }
+      function left() {
+        if (i <= 0) i = people.length;
         i--;
         print();
       }
 
-      
-    var generatedIndexnumber ;
-    var generatedIndexnumberNew;
+      var generatedIndexnumber;
+      var generatedIndexnumberNew;
 
-    function surprise() {
-        
-        
-        var generatedIndexnumber  = Math.floor(Math.random()*people.length);
+      function surprise() {
+        var generatedIndexnumber = Math.floor(Math.random() * people.length);
 
+        while (generatedIndexnumber == generatedIndexnumberNew) {
+          var generatedIndexnumber = Math.floor(Math.random() * people.length);
+        }
 
-        while(generatedIndexnumber == generatedIndexnumberNew) {
-            var generatedIndexnumber = Math.floor(Math.random()*people.length)
-        } 
-        
-        generatedIndexnumber == generatedIndexnumberNew
-        console.log(generatedIndexnumber)
-       
+        generatedIndexnumber == generatedIndexnumberNew;
+        console.log(generatedIndexnumber);
 
-          personImage.setAttribute("src", people[generatedIndexnumber].image);
-          personAuthor.innerHTML=people[generatedIndexnumber].author;
-          personJob.innerHTML=people[generatedIndexnumber].job;
-          personInfo.innerHTML=people[generatedIndexnumber].info;
-
-
-    }
-
-    
+        personImage.setAttribute("src", people[generatedIndexnumber].image);
+        personAuthor.innerHTML = people[generatedIndexnumber].author;
+        personJob.innerHTML = people[generatedIndexnumber].job;
+        personInfo.innerHTML = people[generatedIndexnumber].info;
+      }
     </script>
   </body>
 </html>
