@@ -12,6 +12,7 @@
     ></script>
   </head>
   <body>
+    <main class="main_class"></main>
     <div class="title">
       <h1>Our Reviews</h1>
       <div class="underline"></div>
@@ -21,17 +22,15 @@
         <div class="photo_cont">
           <i class="fa-solid fa-quote-right" id="quot"></i>
 
-          <div class="photo_back"></div>
-
-          <img class="photo" id="susan" src="0.png" alt="" />
+             <img class="photo" id="susan" src="0.png" alt="" />
         </div>
 
-        <h4 id="author">Muhammed Salah</h4>
+        <h4 id="author">Thomas Baker</h4>
 
-        <p id="job">FUTBALL PLAYER</p>
+        <p id="job">WEB DEVELOPER</p>
 
         <p id="information">
-          I thought it was fake...… But its real and  editors really tried to help me. Loved Ranch. I am gonna use it for my business purposes from now onwards
+          I thought it was fake...… But its real and  editors really tried to help me. Loved Ranch. I am gonna use it for my business purposes from now onwards.
         </p>
 
         <div class="button_cont">
@@ -53,7 +52,7 @@
 
       const people = [
         {
-          author: "Michaelle Johnson",
+          author: "Michaelle jackson",
           job: "STUDENT",
           info: "It helped me a lot to write in English. There are people who can check my writing and in the same time, I can learn where my mistakes are.",
           image: "1.png",
@@ -67,7 +66,7 @@
         {
           author: "Indra Lee",
           job: " DESIGNER",
-          info: "I'm stoked that actual people are reviewing my text. I want to express my most sincere appreciation to them for taking the time to help me",
+          info: "'I'm stoked that actual people are reviewing my text. I want to express my most sincere appreciation to them for taking the time to help me.'",
           image: "3.png",
         },
         {
@@ -75,6 +74,12 @@
           job: "BUTCHER",
           info: "This is a smart format! Didn't know my text would be edited on the spot. Therefor I'm really excited to use it again in the future.",
           image: "4.png",
+        },
+        {
+          author: "Thomas Baker",
+          job: "WEB DEVELOPER",
+          info: " I thought it was fake...… But its real and  editors really tried to help me. Loved Ranch. I am gonna use it for my business purposes from now onwards.",
+          image: "0.png",
         },
       ];
 
@@ -100,23 +105,23 @@
         print();
       }
 
-      var generatedIndexnumber;
-      var generatedIndexnumberNew;
+      var randomIndex;
+      var randomIndexNew;
 
       function surprise() {
-        var generatedIndexnumber = Math.floor(Math.random() * people.length);
+        var randomIndex = Math.floor(Math.random() * people.length);
 
-        while (generatedIndexnumber == generatedIndexnumberNew) {
-          var generatedIndexnumber = Math.floor(Math.random() * people.length);
+        while (randomIndex == randomIndexNew) {
+          var randomIndex = Math.floor(Math.random() * people.length);
         }
 
-        generatedIndexnumber == generatedIndexnumberNew;
-        console.log(generatedIndexnumber);
+         randomIndexNew = randomIndex;
+        console.log(randomIndex);
 
-        personImage.setAttribute("src", people[generatedIndexnumber].image);
-        personAuthor.innerHTML = people[generatedIndexnumber].author;
-        personJob.innerHTML = people[generatedIndexnumber].job;
-        personInfo.innerHTML = people[generatedIndexnumber].info;
+        personImage.setAttribute("src", people[randomIndex].image);
+        personAuthor.innerHTML = people[randomIndex].author;
+        personJob.innerHTML = people[randomIndex].job;
+        personInfo.innerHTML = people[randomIndex].info;
       }
     </script>
   </body>
